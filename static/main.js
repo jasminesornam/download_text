@@ -22,7 +22,7 @@ $(function () {
             });
         });
     });
-
+    // line no. 28 - 40
     function syncDrawingData(data) {
 
         document.getElementById('text_area').value = data.textarea_value
@@ -55,12 +55,12 @@ $(function () {
 }
 
     function SettingSyncData(){
-    syncStream.publishMessage({
+    syncStream.publishMessage({ // add line no. 59
             textarea_color:background_color,
             textarea_value:text
         });
     }
-
+    // write line no. 64 - 80
     function select_color(){
      selected_color = document.getElementById("select").value
 
@@ -79,7 +79,7 @@ $(function () {
 
     }
 
-    text_area.addEventListener("keyup", messageSync)
+    text_area.addEventListener("keyup", messageSync) // add line no. 83
     select_element.addEventListener('change',select_color)
 
 });

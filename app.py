@@ -31,9 +31,9 @@ def generate_token():
     token.add_grant(sync_grant_access)
     return jsonify(identity=username, token=token.to_jwt().decode())
 
-
+# line 35 - 43 (write)
 @app.route('/', methods=['POST'])
-def textdata():
+def download_text():
     text_from_notepad = request.form['text']
     with open('workfile.txt', 'w') as f:
         f.write(text_from_notepad)
